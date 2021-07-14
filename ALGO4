@@ -1,0 +1,22 @@
+
+ 
+Procedure permutation(var xp,yp: integer)
+begin
+    int temp = xp;
+    xp = yp;
+    yp = temp;
+
+ end
+
+Procedure Recherche(var arr: ARRAY_OF INTEGER)
+
+begin
+    var n, i, j: integer;
+    for (i = 0; i < n-1; i++)    
+     
+    // Last i elements are already in place
+    for (j = 0; j < n-i-1; j++)
+        if (arr[j] > arr[j+1])
+            permutation(arr[j],arr[j+1]);
+end
+ 
